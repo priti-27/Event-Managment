@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href="StyleSheet.css" rel="styleSheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            margin-right: 5px;
+            margin-left: 300px;
+            background-color: white;
+            text-align: center;
+            border-radius: 8px;
+            width: 1121px;
+            height: 570px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+<h2 class="header"><a href="welcome.aspx"> Tech Fest </a></h2>
+   <div class="menu">
+   
+     <ul> 
+       
+        <li><a href="UpcomingEvents.aspx">Upcoming Events</a></li>           
+        <li><a href="Events.aspx">Events</a></li>
+        <li><a href="volunteer.aspx">volunteer</a></li>
+        <li><a href="About.aspx">About</a></li>
+        <li style="height: 48px"><a href="Contactus.aspx">Contact Us</a></li>&nbsp;
+
+        
+      <img id="ad" src="image/borna-bevanda-377277-unsplash.jpg"  
+                style="width: 211px; height: 239px;" align="center" 
+                onclick="return ad_onclick()" />
+      </ul>
+      
+  </div>
+  <table id="table">
+  <tr>
+  <td class="style1">
+                   
+              <asp:ContentPlaceHolder id="MainContentPlaceHolder" runat="server">
+                  
+              </asp:ContentPlaceHolder>
+            
+            </td>
+            <td class="side_col">
+                        
+           
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+         
+          </td>
+          </tr>
+      </table>
+   
+    <div class="footer">
+         <h5>Copyright © 2018,  TechFest,  Design and Develop By Pritimaurya</h5>
+      </div>  
+      
+    </form>
+      
+</body>
+</html>
+
+
+

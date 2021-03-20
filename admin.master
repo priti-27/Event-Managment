@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title></title>
+      <link href="StyleSheet.css" rel="styleSheet" type="text/css" />
+       <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            margin-right: 5px;
+            margin-left: 300px;
+            background-color: white;
+            text-align: center;
+            border-radius: 8px;
+            width: 1121px;
+            height: 570px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       <h2 class="header"><a href="welcome.aspx"> Tech Fest </a></h2>
+   <div class="menu">
+   
+     <ul> 
+       
+        <li><a href="UpcomingEvent.aspx">Upcoming Events</a></li>           
+        <li><a href="add.aspx">Add Event</a></li>
+        <li><a href="mangeEventhead.aspx"> Event Head</a></li>
+        <li><a href="AddVolunteer.aspx">Add volunteer</a></li>
+       
+      </ul>
+      
+  </div>
+  <table id="table">
+  <tr>
+  <td class="style1">
+                   
+              <asp:ContentPlaceHolder id="MainContentPlaceHolder" runat="server">
+              </asp:ContentPlaceHolder>
+            
+            </td>
+            <td class="side_col">
+                        
+           
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+         
+          </td>
+          </tr>
+      </table>
+   
+    <div class="footer">
+         <h5>Copyright © 2018,  TechFest,  Design and Develop By Pritimaurya</h5>
+      </div>  
+      
+    </div>
+    </form>
+</body>
+</html>
